@@ -1,9 +1,10 @@
 #Password Generator
-from random import *
+from random import randint
+import random
 
 def main():
     strength = input("Do you want a strong password, or a weak password: ")
-    strength.lower()
+    strength = strength.lower()
     if(strength=="strong"):
         print("Password is: ", password_strong())
     elif(strength=="weak"):
@@ -12,7 +13,10 @@ def main():
         print("Invalid input!")
 
 def password_strong():
-    password = " "
+    #Size of password
+    rand_num = 10
+    s = "abcdefghijklmnopqrstuvwxyz01234567890ABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%^&*()?"
+    password =  "".join(random.sample(s,rand_num))
     return password
 
 def password_weak():
