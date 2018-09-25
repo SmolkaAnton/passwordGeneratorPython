@@ -14,7 +14,7 @@ def main():
 
 def password_strong():
     #Size of password
-    rand_num = 10
+    rand_num = randint(6,15) #Generates size of password
     s = "abcdefghijklmnopqrstuvwxyz01234567890ABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%^&*()?"
     password =  "".join(random.sample(s,rand_num))
     return password
